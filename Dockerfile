@@ -1,5 +1,7 @@
 FROM ubuntu
 
+RUN mkdir -p /gasoline
+WORKDIR /gasoline
 # update ubuntu
 RUN apt-get update -y
 
@@ -19,7 +21,6 @@ RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > /rustup.sh
 RUN chmod u+x /rustup.sh
 RUN /rustup.sh -y
 
-
 # install cargo modules
 RUN cargo install diesel_cli --no-default-features --features mysql
 
@@ -31,6 +32,6 @@ COPY ./Cargo.lock .
 COPY . .
 
 # build
-RUN cargo check
+RUN cargo build 
 
 CMD ["cargo", "run"]
