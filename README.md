@@ -1,6 +1,6 @@
 # gasoline
 
-learing diesel.
+learing [diesel](https://lib.rs/crates/diesel), [actix-web](https://lib.rs/crates/actix-web), and tying them together with [r2d2](https://lib.rs/crates/r2d2)
 
 build the container:
 

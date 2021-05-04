@@ -15,5 +15,10 @@ fn main() {
         .load::<Pet>(&connection)
         .expect("cant get pets");
 
-    println!("got pets! {:?}", results);
+    results.iter().for_each(|result| {
+        println!(
+            "name: {:?}, species: {:?}, owner: {:?}",
+            result.name, result.species, result.owner
+        );
+    });
 }
