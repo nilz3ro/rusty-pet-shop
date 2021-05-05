@@ -1,7 +1,8 @@
 use super::schema::pets;
 use diesel::Queryable;
+use serde::Serialize;
 
-#[derive(Queryable, Debug)]
+#[derive(Queryable, Debug, Serialize)]
 pub struct Pet {
     pub pet_id: i32,
     pub name: Option<String>,

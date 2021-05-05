@@ -20,7 +20,7 @@ fn main() {
     stdin().read_line(&mut owner).unwrap();
     let owner = owner.trim();
 
-    let pet = create_pet(&connection, name, owner, species).expect("could not create pet.");
+    data::create_pet(&connection, name, owner, species).expect("could not create pet.");
     println!("Created a new pet!");
 
     #[cfg(not(windows))]

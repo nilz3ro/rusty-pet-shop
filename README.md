@@ -23,14 +23,14 @@ get dburl from example env file.
 source .env
 echo $DATABASE_URL
 
-**TODO:** simplify env stuff.
-
 #setup
 diesel setup --database-url $DATABASE_URL
 
 #migrations
 diesel migration run --database-url $DATABASE_URL
 ```
+
+**TODO:** simplify env stuff.
 
 run native
 

@@ -1,6 +1,3 @@
-// extern crate diesel;
-// extern crate gasoline;
-
 use diesel::prelude::*;
 use gasoline::*;
 use models::*;
